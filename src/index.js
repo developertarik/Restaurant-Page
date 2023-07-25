@@ -1,7 +1,8 @@
 import AboutMe from "./about";
 import contactMe from "./contact";
 import contact from "./contact";
-
+import {AboutMe} from "./src/about.js" 
+import{contactMe} from "./src/contact.js"
 
 function component() {
   const element = document.createElement("div");
@@ -22,7 +23,7 @@ function component() {
   main.innerText = "Main";
   about.innerText = "About";
 
-  contact.innerText = "contact";
+  contact.innerText = "Contact";
   para.innerText = "Main";
   para.style.textAlign = "center";
   
@@ -30,26 +31,28 @@ function component() {
   header.innerText = "Chicken Kebab";
   //box
   boxContainer.style.display = "flex";
+  boxContainer.style.flexDirection = "column";
   boxContainer.style.gap = "50px";
   boxContainer.style.background = "white";
   boxContainer.style.padding = "30px";
-
+  boxContainer.style.textAlign = "center";
+  boxContainer.style.fontStyle = "italic";
   //box1
-  box1.style.width = "200px";
-  box1.style.height = "100px";
+  box1.style.width = "300px";
+  box1.style.height = "200px";
   box1.style.background = "purple";
   box1.style.color = "white";
   box1.innerText ="Chicken Kebab";
   //box2
-  box2.style.width = "200px";
-  box2.style.height = "100px";
+  box2.style.width = "300px";
+  box2.style.height = "200px";
   box2.style.background = "purple";
   box2.style.color = "white";
   box2.innerText ="Delicious Food";
 
   //box3
-  box3.style.width = "200px";
-  box3.style.height = "100px";
+  box3.style.width = "300px";
+  box3.style.height = "200px";
   box3.style.background = "purple";
   box3.style.color = "white";
   box3.innerText ="Sweet";
@@ -65,14 +68,8 @@ function component() {
   MyImg.src = "../dist/chicken.jpg";
   //button
  
-  contact.addEventListener("click", () => {
-    header.innerText = "Contact Page";
-    MyImg.src = "../dist/contact.jpg";
-    box1.innerText = "E mail : notrealmail@gmail.com ";
-    box2.innerText  ="Phone number : XXX 000 XXX";
-    box3.innerText =  "Adress : World";
-    para.innerText = "Contact";
-  });
+  contact.addEventListener("click",()=>contactMe)
+  about.addEventListener("click",()=>AboutMe)
   main.addEventListener("click", () => {
     MyImg.src = "../dist/chicken.jpg";
  
@@ -84,14 +81,9 @@ function component() {
 
 
   });
- about.addEventListener("click",()=>{
-        header.innerText = "About Page";
-        MyImg.src = "../dist/about.jpg";
-        box1.innerText = "About Page this chicken foods";
-        box2.innerText  ="this brand a good brand";
-        box3.innerText =  "hey i love chicken";
-        para.innerText = "About";
- })
+ 
+      
+ 
   //default box styles
  
   //button events
@@ -104,6 +96,7 @@ function component() {
 
   //top navs
   topNav.style.backgroundColor = "black";
+  topNav.style.padding = "20px";
   topNav.style.color = "white";
   topNav.style.display = "flex";
   topNav.style.flexDirection = "row";
