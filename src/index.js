@@ -2,14 +2,16 @@ import AboutMe from "./about";
 import contactMe from "./contact";
 import contact from "./contact";
 
+
 function component() {
   const element = document.createElement("div");
   const topNav = document.createElement("div");
   const para = document.createElement("p");
 
-  const about = document.createElement("a");
-  const main = document.createElement("a");
+   const main = document.createElement("a");
   const contact = document.createElement("a");
+  const about = document.createElement("a");
+
 
   //box
   const boxContainer = document.createElement("div");
@@ -17,8 +19,9 @@ function component() {
   const box2 = document.createElement("div");
   const box3 = document.createElement("div");
 
-  about.innerText = "About";
   main.innerText = "Main";
+  about.innerText = "About";
+
   contact.innerText = "contact";
   para.innerText = "Main";
   para.style.textAlign = "center";
@@ -61,14 +64,7 @@ function component() {
   const MyImg = new Image(500, 300);
   MyImg.src = "../dist/chicken.jpg";
   //button
-  about.addEventListener("click", () => {
-    header.innerText = "About Page";
-    MyImg.src = "../dist/about.jpg";
-    box1.innerText = "About Page this chicken foods";
-    box2.innerText  ="this brand a good brand";
-    box3.innerText =  "hey i love chicken";
-    para.innerText = "About";
-});
+ 
   contact.addEventListener("click", () => {
     header.innerText = "Contact Page";
     MyImg.src = "../dist/contact.jpg";
@@ -88,6 +84,14 @@ function component() {
 
 
   });
+ about.addEventListener("click",()=>{
+        header.innerText = "About Page";
+        MyImg.src = "../dist/about.jpg";
+        box1.innerText = "About Page this chicken foods";
+        box2.innerText  ="this brand a good brand";
+        box3.innerText =  "hey i love chicken";
+        para.innerText = "About";
+ })
   //default box styles
  
   //button events
