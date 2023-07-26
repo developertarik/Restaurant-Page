@@ -77,23 +77,7 @@ function component() {
     box1.innerText ="Chicken Kebab";
     box2.innerText ="Delicious Food";
     box3.innerText ="Sweet";
-
-
-
   });
- 
-      
- 
-  //default box styles
- 
-  //button events
-  // btn.addEventListener("click",()=>{
-
-  // })
-  // btnC.addEventListener("click",()=>{
-
-  // })
-
   //top navs
   topNav.style.backgroundColor = "black";
   topNav.style.padding = "20px";
