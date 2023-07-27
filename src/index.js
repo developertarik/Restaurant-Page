@@ -1,8 +1,6 @@
-import AboutMe from "./about";
-import contactMe from "./contact";
-import contact from "./contact";
-import {AboutMe} from "./src/about.js" 
-import{contactMe} from "./src/contact.js"
+
+import {AboutMe} from "./about.js" 
+import{contactMe} from "./contact.js"
 
 function component() {
   const element = document.createElement("div");
@@ -33,8 +31,9 @@ function component() {
   boxContainer.style.display = "flex";
   boxContainer.style.flexDirection = "column";
   boxContainer.style.gap = "50px";
-  boxContainer.style.background = "white";
-  boxContainer.style.padding = "30px";
+  boxContainer.style.background = "dodgerblue";
+  boxContainer.style.padding = "50px";
+  boxContainer.style.borderRadius ="10px";
   boxContainer.style.textAlign = "center";
   boxContainer.style.fontStyle = "italic";
   //box1
